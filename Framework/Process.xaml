@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1386,1928</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>952,2179</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -102,9 +102,10 @@
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="624,1743" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="624,2074" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strName" />
       <Variable x:TypeArguments="x:String" Name="strLogin" />
@@ -228,7 +229,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <If sap2010:Annotation.AnnotationText="Valida se os Códigos da Empresa e Estabelecimento Não são Nulos." Condition="[strCodigoEmpresa &lt;&gt; Nothing And strCodigoEstabelecimento &lt;&gt; Nothing Or&#xA;strCodigoEmpresa &lt;&gt; &quot;&quot; And strCodigoEstabelecimento &lt;&gt; &quot;&quot;]" DisplayName="If - Código da Empresa e Código do Estabelecimento" sap:VirtualizedContainerService.HintSize="562,799" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="Valida se os Códigos da Empresa e Estabelecimento Não são Nulos." Condition="[strCodigoEmpresa &lt;&gt; Nothing And strCodigoEstabelecimento &lt;&gt; Nothing Or&#xA;strCodigoEmpresa &lt;&gt; &quot;&quot; And strCodigoEstabelecimento &lt;&gt; &quot;&quot;]" DisplayName="If - Código da Empresa e Código do Estabelecimento" sap:VirtualizedContainerService.HintSize="562,1130" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -237,49 +238,56 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="528,586" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="528,739" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Esse Workflow realiza a operação de Conceder, Editar e Revogar perfis de acesso no Sistema Triangulus." DisplayName="Workflows\02_NavegacaoTriangulus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="486,155" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\02_NavegacaoTriangulus.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Servicenow\Servicenow_SetarStatusDoChamado_EmAndamento.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="486,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Workflows\Servicenow\Servicenow_SetarStatusDoChamado_EmAndamento.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strLoginUsuario">[strLogin]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strNomeUsuario">[strName]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strEmail">[strEmail]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strPerfil">[strPerfil]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strDepartamento">[strDepartamento]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strCodigoEmpresa">[strCodigoEmpresa]</InArgument>
-              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strDefaultPassword">[strDefaultPassword]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strChamado">[strChamado]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strFinalidade">[strFinalidade]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strCodigoEstabelecimento">[strCodigoEstabelecimento]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
+              <InArgument x:TypeArguments="x:String" x:Key="in_SysID">
+                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strSysId" />
+              </InArgument>
             </ui:InvokeWorkflowFile.Arguments>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,303" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,345" sap2010:WorkflowViewState.IdRef="CommentOut_2">
             <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,266" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\ServiceNow_FecharChamado.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\ServiceNow_FecharChamado.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Esse Workflow realiza a operação de Conceder, Editar e Revogar perfis de acesso no Sistema Triangulus." DisplayName="Workflows\02_NavegacaoTriangulus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Workflows\02_NavegacaoTriangulus.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_SysId">[strSysId]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strLoginUsuario">[strLogin]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strNomeUsuario">[strName]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strEmail">[strEmail]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strPerfil">[strPerfil]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strDepartamento">[strDepartamento]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strCodigoEmpresa">[strCodigoEmpresa]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strDefaultPassword">[strDefaultPassword]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strChamado">[strChamado]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strFinalidade">[strFinalidade]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_strCodigoEstabelecimento">[strCodigoEstabelecimento]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
                   </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </ui:InvokeWorkflowFile>
               </Sequence>
             </ui:CommentOut.Body>
           </ui:CommentOut>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ServiceNow_FecharChamado.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="486,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflows\Servicenow\ServiceNow_FecharChamado.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_SysId">[strSysId]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
         </Sequence>
       </If.Then>
       <If.Else>
