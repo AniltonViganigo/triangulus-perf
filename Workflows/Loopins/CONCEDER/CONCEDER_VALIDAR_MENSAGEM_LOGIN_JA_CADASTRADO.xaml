@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="out_MensagemLoginJaCadastrado" Type="OutArgument(x:Boolean)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1386,2480</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1365,2650</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,13 +119,13 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="780,2415" sap2010:WorkflowViewState.IdRef="Sequence_136">
+  <Sequence sap:VirtualizedContainerService.HintSize="780,2585" sap2010:WorkflowViewState.IdRef="Sequence_136">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="CONCEDER_VALIDAR_MENSAGEM_LOGIN_JA_CADASTRADO" sap:VirtualizedContainerService.HintSize="718,2304" sap2010:WorkflowViewState.IdRef="Sequence_122">
+    <Sequence DisplayName="CONCEDER_VALIDAR_MENSAGEM_LOGIN_JA_CADASTRADO" sap:VirtualizedContainerService.HintSize="718,2474" sap2010:WorkflowViewState.IdRef="Sequence_122">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="intContador" />
         <Variable x:TypeArguments="x:Boolean" Name="boolOperacaoConcluida" />
@@ -160,11 +160,11 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[boolElementoLoginJaCadastrado = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="656,1768" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="656,1975" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
         <ui:InterruptibleDoWhile.Body>
-          <If Condition="[intContador &lt;= 20]" sap:VirtualizedContainerService.HintSize="620,1602" sap2010:WorkflowViewState.IdRef="If_11">
+          <If Condition="[intContador &lt;= 20]" sap:VirtualizedContainerService.HintSize="620,1809" sap2010:WorkflowViewState.IdRef="If_11">
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="586,1420" sap2010:WorkflowViewState.IdRef="Sequence_148">
+              <Sequence sap:VirtualizedContainerService.HintSize="586,1627" sap2010:WorkflowViewState.IdRef="Sequence_148">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="MensagemExcluirUsuario" />
                 </Sequence.Variables>
@@ -173,14 +173,14 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <p:CVScope DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" ContinueOnError="True" CvMethod="ElementDetection, OCR" DesignTimeCacheId="793c2c57-4197-4f68-b6de-5d8aea705c3a" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="544,1210" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
+                <p:CVScope DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" ContinueOnError="True" CvMethod="ElementDetection, OCR" DesignTimeCacheId="793c2c57-4197-4f68-b6de-5d8aea705c3a" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="544,1418" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
                   <p:CVScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                       </ActivityAction.Argument>
                       <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_156">
-                        <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'Login ja cadastrado.' (22,54,117,16)&quot;]" DesignTimeCacheId="793c2c57-4197-4f68-b6de-5d8aea705c3a" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="510,137" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="90ed9ddd44c21c6dfa2bbc0f3fc2a59a" NumberOfScrolls="2" Result="[boolElementoLoginJaCadastrado]" ScrollDirection="None" TimeoutMS="1500" Version="V6">
+                        <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ContinueOnError="True" Descriptor="[&quot;Target: Text 'Login ja cadastrado.' (22,54,117,16)&quot;]" DesignTimeCacheId="793c2c57-4197-4f68-b6de-5d8aea705c3a" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="510,137" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="90ed9ddd44c21c6dfa2bbc0f3fc2a59a" NumberOfScrolls="2" Result="[boolElementoLoginJaCadastrado]" ScrollDirection="None" TimeoutMS="1500" Version="V6">
                           <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                             <uc:CvDescriptor Id="20e6b641-8fd7-481c-a9b4-b04ea0926574">
                               <uc:CvDescriptor.Target>
@@ -189,7 +189,7 @@
                             </uc:CvDescriptor>
                           </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                         </p:CvElementExistsWithDescriptor>
-                        <If Condition="[boolElementoLoginJaCadastrado]" sap:VirtualizedContainerService.HintSize="510,709" sap2010:WorkflowViewState.IdRef="If_13">
+                        <If Condition="[boolElementoLoginJaCadastrado]" sap:VirtualizedContainerService.HintSize="510,877" sap2010:WorkflowViewState.IdRef="If_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -197,13 +197,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="476,527" sap2010:WorkflowViewState.IdRef="Sequence_153">
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,526" sap2010:WorkflowViewState.IdRef="Sequence_153">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_7">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Boolean">[boolElementoLoginJaCadastrado]</OutArgument>
                                 </Assign.To>
@@ -249,13 +249,13 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_154">
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,169" sap2010:WorkflowViewState.IdRef="Sequence_154">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_8">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Boolean">[boolElementoLoginJaCadastrado]</OutArgument>
                                 </Assign.To>
@@ -318,7 +318,7 @@
                     <InArgument x:TypeArguments="x:Boolean" />
                   </p:CVScope.UseLocalServer>
                 </p:CVScope>
-                <Assign sap:VirtualizedContainerService.HintSize="544,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign sap:VirtualizedContainerService.HintSize="544,81" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[intContador]</OutArgument>
                   </Assign.To>
@@ -329,19 +329,21 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_149">
+              <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_149">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Throw Exception="[New SystemException(&quot;Falha ao Clicar na Mensagem 'Login Já Cadastrado'&quot;)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
               </Sequence>
             </If.Else>
           </If>
         </ui:InterruptibleDoWhile.Body>
+        <ui:InterruptibleDoWhile.Condition>
+          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="boolElementoLoginJaCadastrado = True" />
+        </ui:InterruptibleDoWhile.Condition>
       </ui:InterruptibleDoWhile>
-      <Assign sap:VirtualizedContainerService.HintSize="656,81" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <Assign sap:VirtualizedContainerService.HintSize="656,82" sap2010:WorkflowViewState.IdRef="Assign_9">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Boolean">[out_MensagemLoginJaCadastrado]</OutArgument>
         </Assign.To>
